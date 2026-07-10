@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SKY REPORT</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <header>
+    <div class="logo">SKY<span>REPORT</span></div>
+    <p class="tagline">ATMOSPHERIC INTELLIGENCE SYSTEM</p>
+  </header>
+
+  <main>
+    <section class="control-panel">
+      <label class="select-label" for="city-select">SELECT CITY</label>
+      <div class="select-wrapper">
+        <select id="city-select">
+          <option value="">— CHOOSE LOCATION —</option>
+          <option value="new york">New York</option>
+          <option value="los angeles">Los Angeles</option>
+          <option value="chicago">Chicago</option>
+          <option value="paris">Paris</option>
+          <option value="tokyo">Tokyo</option>
+          <option value="london">London</option>
+        </select>
+        <span class="select-arrow">▼</span>
+      </div>
+      <button id="get-weather-btn">FETCH WEATHER</button>
+    </section>
+
+    <section class="weather-display" id="weather-display">
+      <div class="weather-header">
+        <div class="icon-wrap">
+          <img id="weather-icon" src="" alt="weather icon" />
+        </div>
+        <div class="location-block">
+          <div id="location" class="location"></div>
+          <div id="weather-main" class="weather-main"></div>
+        </div>
+      </div>
+
+      <div class="temp-block">
+        <div class="temp-main">
+          <span class="label">TEMPERATURE</span>
+          <span id="main-temperature" class="value big"></span>
+        </div>
+        <div class="temp-feels">
+          <span class="label">FEELS LIKE</span>
+          <span id="feels-like" class="value"></span>
+        </div>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-icon">💧</span>
+          <span class="label">HUMIDITY</span>
+          <span id="humidity" class="value"></span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-icon">🌬️</span>
+          <span class="label">WIND SPEED</span>
+          <span id="wind" class="value"></span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-icon">💨</span>
+          <span class="label">WIND GUST</span>
+          <span id="wind-gust" class="value"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+            </html>
